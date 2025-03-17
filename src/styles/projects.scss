@@ -47,9 +47,9 @@
         }
       }
     }
-    .loader, [aria-label="three-dots-loading"]{
+    .loader, [aria-label="beat-loader"]{
       margin: 3rem auto;
-      justify-content: center;
+      width: fit-content;
     }
     
     .portfolio-container {

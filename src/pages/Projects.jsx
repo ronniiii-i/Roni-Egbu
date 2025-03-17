@@ -80,9 +80,9 @@ function Projects() {
             width="80"
             radius="9"
             color="#ffffff"
-            ariaLabel="Beat Loader"
+            ariaLabel="beat-loader"
             wrapperStyle={{}}
-            wrapperClassName="loader"
+            className="loader"
             visible={true}
             loading
             speedMultiplier={0.3}

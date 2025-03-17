@@ -1,6 +1,6 @@
-import { useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import Swal from "sweetalert2";
 
 function Contact() {
   const form = useRef();
@@ -32,39 +32,42 @@ function Contact() {
       );
   };
 
+  function showSuccessAlert() {
+    Swal.fire({
+      title: "Success!",
+      text: "Email sent successfully",
+      icon: "success",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#4CAF50",
+      background: "#000",
+      color: "#fff",
+    });
+  }
+
+  const showErrorAlert = useCallback(() => {
+    Swal.fire({
+      title: "Error",
+      text: errorMessage,
+      icon: "error",
+      confirmButtonText: "OK",
+      background: "#000",
+      color: "#fff",
+    });
+  }, [errorMessage]);
+
+  useEffect(() => {
+    if (isSuccess === true) {
+      showSuccessAlert();
+      setIsSuccess(null); // Clear the success state after displaying the alert
+    } else if (isSuccess === false) {
+      showErrorAlert();
+      setIsSuccess(null); // Clear the error state after displaying the alert
+    }
+  }, [isSuccess, showErrorAlert]); // Only re-run the effect if the `isSuccess` state variable changes
+
   return (
     <main id="contact">
       <h1>Contact</h1>
-      {isSuccess === true && (
-        <div className="success flex align-center justify-center">
-          <div className="content flex column align-center justify-center">
-            <button
-              onClick={() => {
-                setIsSuccess(null);
-              }}
-            >
-              ╳
-            </button>
-            {/* <img src={check} alt="Success" /> */}
-            <p>Email Sent Successfully!</p>
-          </div>
-        </div>
-      )}
-      {isSuccess === false && (
-        <div className="error flex align-center justify-center">
-          <div className="content flex column align-center justify-center">
-            <button
-              onClick={() => {
-                setIsSuccess(null);
-              }}
-            >
-              ╳
-            </button>
-            {/* <img src={error} alt="Error" /> */}
-            <p>{errorMessage}</p>
-          </div>
-        </div>
-      )}
       <form ref={form} onSubmit={sendEmail}>
         <div className="g-af">
           <input name="name" type="text" placeholder="Your Name" required />

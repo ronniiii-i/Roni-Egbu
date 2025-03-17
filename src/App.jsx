@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-// import Contact from "./pages/Contact";
+import Contact from "./pages/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { FaGithubSquare, FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -29,7 +29,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/projects" element={<Projects />} />
-          {/* <Route exact path="/contact" element={<Contact />} /> */}
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
         <footer className="flex justify-between align">
           <p>Roni Egbu © 2023. All rights reserved.</p>
