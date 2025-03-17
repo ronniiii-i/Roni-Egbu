@@ -1,0 +1,60 @@
+@use "./prestyles" as *;
+
+#contact {
+  padding: 2vw;
+  h1 {
+    text-align: center;
+  }
+  form {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 40rem;
+    input,
+    textarea {
+      display: block;
+      background-color: transparent;
+      padding: 0.5rem 1rem;
+      border: 2px solid $white;
+      color: $white;
+      font-family: $sans;
+      width: 100%;
+      &::placeholder {
+        color: rgba($white, 0.6);
+        font-weight: 600;
+      }
+    }
+    .g-af {
+      gap: 1.5rem;
+    }
+    input[name="subject"]{
+      margin-block: 1.5rem;
+    }
+    textarea {
+      margin-block: 1.5rem;
+      resize: none;
+      height: 10rem;
+    }
+  }
+  .success,.error{
+    position: fixed;
+    inset: 0;
+    background-color: rgba($black, 0.6);;
+    padding: 2vw;
+    .content{
+      position: relative;
+      width: 100%;
+      max-width: 30rem;
+      background-color: $black;
+      height: 20rem;
+      outline: 2px solid $white;
+      button{
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        background: transparent;
+        font-size: 1.5rem;
+        border: none;
+      }
+    }
+  }
+}

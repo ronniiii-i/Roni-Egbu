@@ -1,0 +1,84 @@
+@use "./prestyles" as *;
+
+#project {
+  padding-top: 3vw;
+  h1 {
+    text-align: center;
+  }
+  #projects {
+    .sort {
+      margin: auto;
+      h3{
+        font-weight: 400;
+        svg{
+          align-self: flex-end;
+        }
+      }
+      .custom-select {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        position: relative;
+        width: 9rem;
+        border: 1px solid $white;
+        z-index: 9;
+        .selected p {
+          font-size: 1.1rem;
+        }
+        .tags {
+          gap: 1rem;
+          background-color: $black;
+          position: absolute;
+          top: 110%;
+          left: 0;
+          width: 100%;
+          overflow: hidden;
+          height: 0px;
+          &.open {
+            height: 20rem;
+            border: 1px solid $white;
+          }
+          li {
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid $white;
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+    .loader, [aria-label="three-dots-loading"]{
+      margin: 3rem auto;
+      justify-content: center;
+    }
+    
+    .portfolio-container {
+      column-gap: 2%;
+      row-gap: 2rem;
+      .project-card {
+        width: 32%;
+        min-width: 280px;
+      }
+    }
+  }
+  @media screen and (max-width: 911px) {
+    #projects {
+      .portfolio-container {
+        column-gap: 3%;
+        .project-card {
+          width: 48.5%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 601px) {
+    #projects {
+      .portfolio-container {
+        column-gap: 0;
+        .project-card {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
