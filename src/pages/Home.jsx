@@ -10,6 +10,14 @@ import { SiJavascript } from "react-icons/si";
 
 function Home() {
   const [shuffledData, setShuffledData] = useState([]);
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href =
+      "https://res.cloudinary.com/qaz2dc/image/upload/v1693761903/Portfolio/hero_ejv8zd.webp"; // Your Cloudinary image URL
+    document.head.appendChild(link);
+  }, []);
 
   useEffect(() => {
     // Function to shuffle the data array randomly
