@@ -59,6 +59,7 @@ function Home() {
           <img
             src="https://res.cloudinary.com/qaz2dc/image/upload/v1693761903/Portfolio/hero_ejv8zd.webp"
             alt="Hero"
+            loading="lazy"
           />
         </div>
       </section>

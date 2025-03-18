@@ -33,6 +33,7 @@ function Nav() {
       <a href="/" className="logo">
         <img
           src="https://res.cloudinary.com/qaz2dc/image/upload/c_crop,h_200,w_550/v1693760194/Portfolio/roniegbu_vb3iz9.png"
+          loading="lazy"
           alt="Roni Egbu"
         />
       </a>

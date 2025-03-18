@@ -4,7 +4,7 @@ const ProjectCard = ({ project, handleSelectTag }) => {
   return (
     <div className="project-card" key={project.id}>
       <div className="img flex justify-center align-center">
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title} loading="lazy" />
         <div className="button-group flex justify-evenly align-center">
           <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
             View Demo
