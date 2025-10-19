@@ -16,19 +16,16 @@ function Projects() {
   };
 
   const getAllTechnologies = (data) => {
-    const allTechnologies = [];
-
-    // Iterate through the project data
-    data.forEach((project) => {
-      project.technologies.forEach((tech) => {
-        // Add each technology to the allTechnologies array
-        if (!allTechnologies.includes(tech)) {
-          allTechnologies.push(tech);
-        }
+    const counts = data.reduce((map, project) => {
+      (project.technologies || []).forEach((tech) => {
+        map.set(tech, (map.get(tech) || 0) + 1);
       });
-    });
+      return map;
+    }, new Map());
 
-    return allTechnologies;
+    return [...counts.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map(([tech]) => tech);
   };
   const technologies = getAllTechnologies(projectsData);
 
