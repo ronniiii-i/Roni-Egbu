@@ -10,6 +10,7 @@ const projectsData = [
     demoUrl: "https://courselist-beta.vercel.app/",
     sourceUrl:
       "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/courselist",
+    timestamp: "2023-12-02T10:00:00Z",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const projectsData = [
     technologies: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://360codingchallenge.vercel.app/",
     sourceUrl: "https://github.com/ronniiii-i/360codingchallenge",
+    timestamp: "2023-12-05T14:30:00Z",
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ const projectsData = [
     demoUrl: "https://todo-app-dg.vercel.app/",
     sourceUrl:
       "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/todo-app-main",
+    timestamp: "2023-12-08T09:15:00Z",
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const projectsData = [
     technologies: ["HTML", "CSS", "JavaScript", "GSAP"],
     demoUrl: "https://crappo-crypto-currency.vercel.app/",
     sourceUrl: "https://github.com/ronniiii-i/crypto_currency",
+    timestamp: "2023-12-11T16:45:00Z",
   },
   {
     id: 5,
@@ -52,6 +56,7 @@ const projectsData = [
     demoUrl: "https://advice-generator-app-fmc.vercel.app//",
     sourceUrl:
       "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/advice-generator-app",
+    timestamp: "2023-12-14T12:00:00Z",
   },
   {
     id: 6,
@@ -62,6 +67,7 @@ const projectsData = [
     technologies: ["React", "SCSS", "API"],
     demoUrl: "https://interno-self.vercel.app/",
     sourceUrl: "https://github.com/ronniiii-i/Interno",
+    timestamp: "2023-12-18T18:30:00Z",
   },
   {
     id: 7,
@@ -72,8 +78,19 @@ const projectsData = [
     technologies: ["React", "SCSS", "Firebase"],
     demoUrl: "https://ucbraids.vercel.app/",
     sourceUrl: "",
+    timestamp: "2023-12-22T08:45:00Z",
   },
-  // additional project data here...
-];
+
+  {
+    id: 1760909397656,
+    title: "rhf-ts — React Hook Form + TypeScript Practice Project",
+    description: "A personal learning project where I built a multi-step form using React Hook Form, Zod, and TypeScript.",
+    image: "https://res.cloudinary.com/qaz2dc/image/upload/v1760911794/Portfolio%20Images/thumbs/rhf-ts.vercel.app__gss3fr.webp",
+    technologies: ["React","TypeScript","React Hook Form","Zod","Tailwind CSS"],
+    demoUrl: "https://rhf-ts.vercel.app/",
+    sourceUrl: "https://github.com/ronniiii-i/rhf-ts",
+    timestamp: "2025-10-19T21:29:57.656Z"
+  },
+  ];
 
 export default projectsData;
