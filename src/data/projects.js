@@ -91,6 +91,17 @@ const projectsData = [
     sourceUrl: "https://github.com/ronniiii-i/rhf-ts",
     timestamp: "2025-10-19T21:29:57.656Z"
   },
+  
+  {
+    id: 1760910126704,
+    title: "ClaspCRM — Complete Business Management Solution",
+    description: "An all-in-one business management platform that helps enterprises manage contacts, projects, HR, inventory, analytics, and more in one unified system.",
+    image: "https://res.cloudinary.com/qaz2dc/image/upload/v1760914263/Portfolio%20Images/thumbs/claspcrm.vercel.app__dtgkm9.webp",
+    technologies: ["Next.js","TypeScript","Tailwind CSS","Shadcn"],
+    demoUrl: "https://claspcrm.vercel.app/",
+    sourceUrl: "https://github.com/ronniiii-i/ClaspCRM",
+    timestamp: "2025-10-19T21:42:06.704Z"
+  },
   ];
 
 export default projectsData;
