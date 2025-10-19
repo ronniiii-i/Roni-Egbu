@@ -313,11 +313,13 @@ img::selection {
       }
     }
     .technologies {
+      flex-wrap: wrap;
       a {
         margin-top: 0.5rem;
         background-color: $white;
         padding: 5px 10px;
         color: $black;
+        text-wrap: nowrap;
         &:hover {
           text-decoration: none;
         }
