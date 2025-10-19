@@ -41,8 +41,12 @@ function Projects() {
             project.technologies.includes(selectedTag)
           )
         : projectsData;
+      
+      const sorted = [...filtered].sort(
+        (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+      );
 
-      setFilteredProjects(filtered);
+      setFilteredProjects(sorted);
     }, 1000);
   }, [selectedTag]);
 
