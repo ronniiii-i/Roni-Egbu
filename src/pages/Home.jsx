@@ -84,6 +84,36 @@ function Home() {
             Let's dive into the world of frontend development together, where
             functionality meets fun! 🚀🎵
           </p>
+          <p>
+            <a
+              href="/Princess_Roni_Egbu_CV.pdf"
+              className="button"
+              download
+              onClick={async (e) => {
+                const url = "/Princess_Roni_Egbu_CV.pdf";
+                try {
+                  const res = await fetch(url, { mode: "cors" });
+                  if (!res.ok) return;
+                  const blob = await res.blob();
+                  const blobUrl = window.URL.createObjectURL(blob);
+                  const a = document.createElement("a");
+                  a.href = blobUrl;
+                  // a.download = "Roni_Egbu_CV.pdf";
+                  document.body.appendChild(a);
+                  a.click();
+                  a.remove();
+                  window.URL.revokeObjectURL(blobUrl);
+                  e.preventDefault();
+                } catch (err) {
+                  console.error("Error downloading the file", err);
+                  // Fallback to default link behavior
+                  return;
+                }
+              }}
+            >
+              Download my CV
+            </a>
+          </p>
         </div>
         <div className="skills">
           <h3>Frontend Skills</h3>
