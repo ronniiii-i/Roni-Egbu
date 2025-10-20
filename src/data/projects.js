@@ -86,7 +86,7 @@ const projectsData = [
     title: "rhf-ts — React Hook Form + TypeScript Practice Project",
     description: "A personal learning project where I built a multi-step form using React Hook Form, Zod, and TypeScript.",
     image: "https://i.imgur.com/9MUzC9A.png",
-    technologies: ["React","TypeScript","React Hook Form","Zod","Tailwind CSS"],
+    technologies: ["React","TypeScript", "Zod","Tailwind CSS"],
     demoUrl: "https://rhf-ts.vercel.app/",
     sourceUrl: "https://github.com/ronniiii-i/rhf-ts",
     timestamp: "2025-10-19T21:29:57.656Z"
@@ -96,11 +96,45 @@ const projectsData = [
     id: 1760910126704,
     title: "ClaspCRM — Complete Business Management Solution",
     description: "An all-in-one business management platform that helps enterprises manage contacts, projects, HR, inventory, analytics, and more in one unified system.",
-    image: "https://i.imgur.com/3EL24Lg.jpeg",
+    image: "https://i.imgur.com/GyvZPk4.jpeg",
     technologies: ["Next.js","TypeScript","Tailwind CSS","Shadcn"],
     demoUrl: "https://claspcrm.vercel.app/",
     sourceUrl: "https://github.com/ronniiii-i/ClaspCRM",
     timestamp: "2025-10-19T21:42:06.704Z"
+  },
+  
+  {
+    id: 1760914311738,
+    title: "ClaspCRM Backend — Scalable Enterprise API",
+    description: "The backend for ClaspCRM, built with NestJS and Prisma for enterprise-grade performance and modular scalability.",
+    image: "",
+    technologies: ["NestJS","TypeScript","Prisma","PostgreSQL"],
+    demoUrl: "",
+    sourceUrl: "https://github.com/ronniiii-i/crm-backend",
+    timestamp: "2025-10-19T22:51:51.738Z"
+  },
+  
+  {
+    id: 1760957111521,
+    title: "SnapLog — Automated Screenshot Logging System",
+    description: "A Python-based background service that periodically captures screenshots, saves them locally, and syncs them securely to a shared network drive.",
+    image: "",
+    technologies: ["Python"],
+    demoUrl: "",
+    sourceUrl: "https://github.com/ronniiii-i/snaplog",
+    timestamp: "2025-10-20T10:45:11.521Z",
+    type: "Python App"
+  },
+  
+  {
+    id: 1760958547913,
+    title: "Snaplog Server — Centralized Client Management Dashboard",
+    description: "A Tkinter-based desktop dashboard for managing multiple Snaplog clients.",
+    image: "https://i.imgur.com/C8OapCj.png",
+    technologies: ["Python","Tkinter"],
+    demoUrl: "",
+    sourceUrl: "https://github.com/ronniiii-i/snaplog_server",
+    timestamp: "2025-10-20T11:09:07.913Z"
   },
   ];
 
