@@ -102,31 +102,10 @@ function Home() {
               href="/Princess Roni Egbu - Fullstack Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="button"
-              download
-              // onClick={async (e) => {
-              //   // const url = "/Princess_Roni_Egbu_CV.pdf";
-              //   try {
-              //     const res = await fetch(url, { mode: "cors" });
-              //     if (!res.ok) return;
-              //     const blob = await res.blob();
-              //     const blobUrl = window.URL.createObjectURL(blob);
-              //     const a = document.createElement("a");
-              //     a.href = blobUrl;
-              //     // a.download = "Roni_Egbu_CV.pdf";
-              //     document.body.appendChild(a);
-              //     a.click();
-              //     a.remove();
-              //     window.URL.revokeObjectURL(blobUrl);
-              //     e.preventDefault();
-              //   } catch (err) {
-              //     console.error("Error downloading the file", err);
-              //     // Fallback to default link behavior
-              //     return;
-              //   }
-              // }}
+              className="button resume-button"
+              aria-label="View Roni Egbu's resume (opens in a new tab)"
             >
-              Download my CV
+              View my resume
             </a>
           </p>
         </div>
