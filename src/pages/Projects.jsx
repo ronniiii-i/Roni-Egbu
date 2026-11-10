@@ -72,18 +72,9 @@ function Projects() {
           </label>
         </div>
         {loading ? (
-          <BeatLoader
-            height="80"
-            width="80"
-            radius="9"
-            color="#ffffff"
-            ariaLabel="Loading projects"
-            wrapperStyle={{}}
-            className="loader"
-            visible={true}
-            loading
-            speedMultiplier={0.3}
-          />
+          <div className="loader" role="status" aria-label="Loading projects">
+            <BeatLoader color="#ffffff" speedMultiplier={0.3} />
+          </div>
         ) : (
           <div className="portfolio-container flex wrap" aria-live="polite">
             {filteredProjects.map((project) => (

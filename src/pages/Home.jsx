@@ -6,16 +6,20 @@ import Card from "../components/ProjectCard";
 
 import projectsData from "../data/projects";
 import {
-  FaCss3Alt,
-  FaHtml5,
   FaReact,
-  FaSass,
-  FaGitAlt,
   FaNodeJs,
   FaPython,
-  FaDatabase,
 } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiPostgresql } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiTailwindcss,
+  SiNestjs,
+  SiPrisma,
+  SiPostgresql,
+  SiDocker,
+  SiVercel,
+} from "react-icons/si";
 
 function Home() {
   const [shuffledData, setShuffledData] = useState([]);
@@ -127,40 +131,37 @@ function Home() {
           </p>
         </div>
         <div className="skills">
-          <h3>Full-stack toolkit</h3>
-          <div className="flex align-center justify-center wrap">
-            <div className="html">
-              <FaHtml5 />
+          <h3>Skills</h3>
+          <div className="skill-groups">
+            <div>
+              <h4>Frontend</h4>
+              <ul>
+                <li><FaReact aria-hidden="true" /> React</li>
+                <li>Next.js</li>
+                <li><SiTypescript aria-hidden="true" /> TypeScript</li>
+                <li><SiJavascript aria-hidden="true" /> JavaScript</li>
+                <li><SiTailwindcss aria-hidden="true" /> Tailwind CSS</li>
+              </ul>
             </div>
-            <div className="css">
-              <FaCss3Alt />
+            <div>
+              <h4>Backend</h4>
+              <ul>
+                <li><SiNestjs aria-hidden="true" /> NestJS</li>
+                <li><FaNodeJs aria-hidden="true" /> Node.js</li>
+                <li><SiPrisma aria-hidden="true" /> Prisma</li>
+                <li><SiPostgresql aria-hidden="true" /> PostgreSQL</li>
+                <li>REST APIs</li>
+              </ul>
             </div>
-            <div className="js">
-              <SiJavascript />
-            </div>
-            <div className="react">
-              <FaReact />
-            </div>
-            <div className="sass">
-              <FaSass />
-            </div>
-            <div className="git">
-              <FaGitAlt />
-            </div>
-            <div aria-label="Node.js" title="Node.js">
-              <FaNodeJs />
-            </div>
-            <div aria-label="Python" title="Python">
-              <FaPython />
-            </div>
-            <div aria-label="TypeScript" title="TypeScript">
-              <SiTypescript />
-            </div>
-            <div aria-label="PostgreSQL" title="PostgreSQL">
-              <SiPostgresql />
-            </div>
-            <div aria-label="Databases" title="Databases">
-              <FaDatabase />
+            <div>
+              <h4>Other</h4>
+              <ul>
+                <li><FaPython aria-hidden="true" /> Python</li>
+                <li><SiDocker aria-hidden="true" /> Docker</li>
+                <li>Git</li>
+                <li><SiVercel aria-hidden="true" /> Vercel</li>
+                <li>Render</li>
+              </ul>
             </div>
           </div>
         </div>

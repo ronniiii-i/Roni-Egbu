@@ -52,51 +52,24 @@
     h3 {
       text-align: center;
     }
-    .flex {
-      padding: 1rem;
+    .skill-groups {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
-      @keyframes rotate {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
+      padding: 1rem;
+      h4 {
+        margin-bottom: 0.5rem;
       }
-      div {
-        svg {
-          font-size: 3rem;
-          transition: all 0.1s;
-        }
-        &.html:hover {
+      ul {
+        display: grid;
+        gap: 0.35rem;
+        li {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-family: $sans;
           svg {
-            fill: #e34c26;
-          }
-        }
-        &.css:hover {
-          svg {
-            fill: #2965f1;
-          }
-        }
-        &.js:hover {
-          svg {
-            fill: #f0db4f;
-          }
-        }
-        &.react:hover {
-          svg {
-            fill: #61dbfb;
-            animation: rotate 3s linear infinite;
-          }
-        }
-        &.sass:hover {
-          svg {
-            fill: #cc6699;
-          }
-        }
-        &.git:hover {
-          svg {
-            fill: #f34f29;
+            flex: 0 0 auto;
           }
         }
       }
@@ -139,6 +112,9 @@
     .text {
       p {
         min-width: 95%;
+      }
+      #about .skills .skill-groups {
+        grid-template-columns: 1fr;
       }
     }
   }

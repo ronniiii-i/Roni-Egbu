@@ -1,64 +1,5 @@
 const projectsData = [
-  {
-    id: 1,
-    title: "Courselist",
-    description:
-      "A web app to keep track of your courses. Option to download as PDF available",
-    image:
-      "https://res.cloudinary.com/qaz2dc/image/upload/v1678302578/Portfolio%20Images/thumbs/courselist_p3ito3.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://courselist-beta.vercel.app/",
-    sourceUrl:
-      "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/courselist",
-    timestamp: "2023-12-02T10:00:00Z",
-  },
-  {
-    id: 2,
-    title: "HomeSmart Furniture Rentals",
-    description: "A landing page of a furiture rental store",
-    image:
-      "https://res.cloudinary.com/qaz2dc/image/upload/v1678302579/Portfolio%20Images/thumbs/homesmart_l5cu8w.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://360codingchallenge.vercel.app/",
-    sourceUrl: "https://github.com/ronniiii-i/360codingchallenge",
-    timestamp: "2023-12-05T14:30:00Z",
-  },
-  {
-    id: 3,
-    title: "Todo app",
-    description: "A drag and drop todo app",
-    image:
-      "https://res.cloudinary.com/qaz2dc/image/upload/v1678302579/Portfolio%20Images/thumbs/todo_dhtcsw.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://todo-app-dg.vercel.app/",
-    sourceUrl:
-      "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/todo-app-main",
-    timestamp: "2023-12-08T09:15:00Z",
-  },
-  {
-    id: 4,
-    title: "Crappo Crypto Currency",
-    description: "Static crypto site with animations",
-    image:
-      "https://res.cloudinary.com/qaz2dc/image/upload/v1678302579/Portfolio%20Images/thumbs/crappo_zlcrfh.png",
-    technologies: ["HTML", "CSS", "JavaScript", "GSAP"],
-    demoUrl: "https://crappo-crypto-currency.vercel.app/",
-    sourceUrl: "https://github.com/ronniiii-i/crypto_currency",
-    timestamp: "2023-12-11T16:45:00Z",
-  },
-  {
-    id: 5,
-    title: "Advice Generator App",
-    description: "Generate new advice everytime the dice is clicked",
-    image:
-      "https://res.cloudinary.com/qaz2dc/image/upload/v1678302578/Portfolio%20Images/thumbs/advice_vebezj.png",
-    technologies: ["HTML", "CSS", "JavaScript", "API"],
-    demoUrl: "https://advice-generator-app-fmc.vercel.app//",
-    sourceUrl:
-      "https://github.com/ronniiii-i/ronniiii-i.github.io/tree/main/projects/advice-generator-app",
-    timestamp: "2023-12-14T12:00:00Z",
-  },
-  {
+    {
     id: 6,
     title: "Interno",
     description: "Showcasing Creative Home Design and Interior Solutions",
@@ -69,18 +10,6 @@ const projectsData = [
     sourceUrl: "https://github.com/ronniiii-i/Interno",
     timestamp: "2023-12-18T18:30:00Z",
   },
-  {
-    id: 7,
-    title: "UC Braids",
-    description: "Your Destination for Professional Hair Braiding Services",
-    image:
-      "https://res.cloudinary.com/qaz2dc/image/upload/v1694017717/Portfolio%20Images/thumbs/ucbraids_thumb_joefjk.png",
-    technologies: ["React", "SCSS", "Firebase"],
-    demoUrl: "https://ucbraids.vercel.app/",
-    sourceUrl: "",
-    timestamp: "2023-12-22T08:45:00Z",
-  },
-
   {
     id: 1760909397656,
     title: "rhf-ts — React Hook Form + TypeScript Practice Project",
@@ -94,10 +23,10 @@ const projectsData = [
   
   {
     id: 1760910126704,
-    title: "Clasp Workspace — Complete Business Management Solution",
-    description: "An all-in-one business management platform that helps enterprises manage contacts, projects, HR, inventory, analytics, and more in one unified system.",
+    title: "Clasp Workspace — Dynamic Enterprise Workspace OS",
+    description: "The frontend for Clasp Workspace, a configurable enterprise platform with dynamic department routes, data tables, Kanban boards, dashboards, document hubs, form builders, workflows, and a global command palette.",
     image: "https://i.imgur.com/GyvZPk4.jpeg",
-    technologies: ["Next.js","TypeScript","Tailwind CSS","Shadcn"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "TanStack Query"],
     demoUrl: "https://claspcrm.vercel.app/",
     sourceUrl: "https://github.com/ronniiii-i/ClaspCRM",
     timestamp: "2025-10-19T21:42:06.704Z"
@@ -105,13 +34,34 @@ const projectsData = [
   
   {
     id: 1760914311738,
-    title: "Clasp Workspace Backend — Scalable Enterprise API",
-    description: "The backend for ClaspCRM, built with NestJS and Prisma for enterprise-grade performance and modular scalability.",
+    title: "Clasp Workspace Backend — Multi-tenant Workspace API",
+    description: "The NestJS backend powering Clasp Workspace: a database-driven API for dynamic modules, tenant isolation, role-based permissions, workflows, audit logs, exports, and real-time notifications.",
     image: "",
-    technologies: ["NestJS","TypeScript","Prisma","PostgreSQL"],
+    technologies: ["NestJS", "TypeScript", "Prisma", "PostgreSQL", "Redis", "SSE"],
     demoUrl: "",
     sourceUrl: "https://github.com/ronniiii-i/crm-backend",
     timestamp: "2025-10-19T22:51:51.738Z"
+  },
+  {
+    id: 1762812000000,
+    title: "Memora — Collaborative Digital Scrapbook",
+    description: "A shared memory-preservation platform where groups create albums, contribute photos, react, leave voice notes, and compose scrapbook pages together.",
+    image: "https://res.cloudinary.com/qaz2dc/image/upload/v1794349638/Portfolio%20Images/thumbs/memora_xucbgj.png",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "Fabric.js",
+      "Express",
+      "PostgreSQL",
+      "Cloudflare R2",
+      "Pusher",
+    ],
+    demoUrl: "https://memora-roni.vercel.app/",
+    sourceUrl: "https://github.com/ronniiii-i/Memora",
+    timestamp: "2026-11-10T12:00:00Z",
+    type: "Full-stack Application",
   },
   
   {
