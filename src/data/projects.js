@@ -94,7 +94,7 @@ const projectsData = [
   
   {
     id: 1760910126704,
-    title: "ClaspCRM — Complete Business Management Solution",
+    title: "Clasp Workspace — Complete Business Management Solution",
     description: "An all-in-one business management platform that helps enterprises manage contacts, projects, HR, inventory, analytics, and more in one unified system.",
     image: "https://i.imgur.com/GyvZPk4.jpeg",
     technologies: ["Next.js","TypeScript","Tailwind CSS","Shadcn"],
@@ -105,7 +105,7 @@ const projectsData = [
   
   {
     id: 1760914311738,
-    title: "ClaspCRM Backend — Scalable Enterprise API",
+    title: "Clasp Workspace Backend — Scalable Enterprise API",
     description: "The backend for ClaspCRM, built with NestJS and Prisma for enterprise-grade performance and modular scalability.",
     image: "",
     technologies: ["NestJS","TypeScript","Prisma","PostgreSQL"],
@@ -135,17 +135,6 @@ const projectsData = [
     demoUrl: "",
     sourceUrl: "https://github.com/ronniiii-i/snaplog_server",
     timestamp: "2025-10-20T11:09:07.913Z"
-  },
-  
-  {
-    id: 1767320203015,
-    title: "MediaShare",
-    description: "An open-source project for private media sharing among friends",
-    image: "https://res.cloudinary.com/qaz2dc/image/upload/v1767320687/Portfolio%20Images/thumbs/a1c2a749-40e6-4fcf-9f94-b5fd17ec3b6b.png",
-    technologies: ["Next.js","TypeScript","Tailwind CSS","Prisma","PostgreSQL","NextAuth.js","UploadThing","Zod"],
-    demoUrl: "https://mediashareapp.vercel.app/",
-    sourceUrl: "https://github.com/ronniiii-i/media-share-app",
-    timestamp: "2026-01-02T02:16:43.015Z"
   },
   ];
 

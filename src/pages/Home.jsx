@@ -86,7 +86,7 @@ function Home() {
           </p>
           <p>
             <a
-              href="/Princess_Roni_Egbu_CV.pdf"
+              href="/Princess Roni Egbu - Fullstack Developer.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="button"
