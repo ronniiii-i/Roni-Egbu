@@ -25,10 +25,10 @@ const projectsData = [
     id: 1760910126704,
     title: "Clasp Workspace — Dynamic Enterprise Workspace OS",
     description: "The frontend for Clasp Workspace, a configurable enterprise platform with dynamic department routes, data tables, Kanban boards, dashboards, document hubs, form builders, workflows, and a global command palette.",
-    image: "https://i.imgur.com/GyvZPk4.jpeg",
+    image: "https://res.cloudinary.com/qaz2dc/image/upload/v1794352798/Portfolio%20Images/thumbs/og-image_k63wfm.jpg",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "TanStack Query"],
-    demoUrl: "https://claspcrm.vercel.app/",
-    sourceUrl: "https://github.com/ronniiii-i/ClaspCRM",
+    demoUrl: "https://claspworkspace.work.gd/",
+    sourceUrl: "https://github.com/ronniiii-i/Clasp-Workspace",
     timestamp: "2025-10-19T21:42:06.704Z"
   },
   
