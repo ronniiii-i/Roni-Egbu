@@ -18,7 +18,8 @@ import {
   SiPrisma,
   SiPostgresql,
   SiDocker,
-  SiVercel,
+  SiNextdotjs,
+  SiGit,
 } from "react-icons/si";
 
 function Home() {
@@ -116,7 +117,7 @@ function Home() {
               <h4>Frontend</h4>
               <ul>
                 <li><FaReact aria-hidden="true" /> React</li>
-                <li>Next.js</li>
+                <li><SiNextdotjs aria-hidden="true" /> Next.js</li>
                 <li><SiTypescript aria-hidden="true" /> TypeScript</li>
                 <li><SiJavascript aria-hidden="true" /> JavaScript</li>
                 <li><SiTailwindcss aria-hidden="true" /> Tailwind CSS</li>
@@ -129,7 +130,6 @@ function Home() {
                 <li><FaNodeJs aria-hidden="true" /> Node.js</li>
                 <li><SiPrisma aria-hidden="true" /> Prisma</li>
                 <li><SiPostgresql aria-hidden="true" /> PostgreSQL</li>
-                <li>REST APIs</li>
               </ul>
             </div>
             <div>
@@ -137,9 +137,7 @@ function Home() {
               <ul>
                 <li><FaPython aria-hidden="true" /> Python</li>
                 <li><SiDocker aria-hidden="true" /> Docker</li>
-                <li>Git</li>
-                <li><SiVercel aria-hidden="true" /> Vercel</li>
-                <li>Render</li>
+                <li><SiGit aria-hidden="true" /> Git</li>
               </ul>
             </div>
           </div>
