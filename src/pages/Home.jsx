@@ -5,8 +5,17 @@ import { TypeAnimation } from "react-type-animation";
 import Card from "../components/ProjectCard";
 
 import projectsData from "../data/projects";
-import { FaCss3Alt, FaHtml5, FaReact, FaSass, FaGitAlt } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import {
+  FaCss3Alt,
+  FaHtml5,
+  FaReact,
+  FaSass,
+  FaGitAlt,
+  FaNodeJs,
+  FaPython,
+  FaDatabase,
+} from "react-icons/fa";
+import { SiJavascript, SiTypescript, SiPostgresql } from "react-icons/si";
 
 function Home() {
   const [shuffledData, setShuffledData] = useState([]);
@@ -33,7 +42,7 @@ function Home() {
   }, []);
 
   return (
-    <main>
+    <main id="main-content">
       <section id="hero">
         <div className="text">
           <h1>
@@ -54,10 +63,10 @@ function Home() {
             />
           </h1>
           <p>
-            Welcome to Roni's corner of the web, where the art of functional
-            frontend development takes center stage. Explore a world of digital
-            solutions designed for seamless user experiences. Let's dive into
-            the world of practical and user-friendly web applications
+            Welcome to Roni's corner of the web, where thoughtful frontend
+            experiences meet reliable backend systems. Explore full-stack
+            solutions built with accessible interfaces, maintainable APIs, and
+            practical data-driven features.
           </p>
           <a href="#projects" className="button button-primary">
             Explore Projects
@@ -81,8 +90,8 @@ function Home() {
             honestly😂).
           </p>
           <p>
-            Let's dive into the world of frontend development together, where
-            functionality meets fun! 🚀🎵
+            Let's build reliable, inclusive products where functionality meets
+            fun! 🚀🎵
           </p>
           <p>
             <a
@@ -118,7 +127,7 @@ function Home() {
           </p>
         </div>
         <div className="skills">
-          <h3>Frontend Skills</h3>
+          <h3>Full-stack toolkit</h3>
           <div className="flex align-center justify-center wrap">
             <div className="html">
               <FaHtml5 />
@@ -137,6 +146,21 @@ function Home() {
             </div>
             <div className="git">
               <FaGitAlt />
+            </div>
+            <div aria-label="Node.js" title="Node.js">
+              <FaNodeJs />
+            </div>
+            <div aria-label="Python" title="Python">
+              <FaPython />
+            </div>
+            <div aria-label="TypeScript" title="TypeScript">
+              <SiTypescript />
+            </div>
+            <div aria-label="PostgreSQL" title="PostgreSQL">
+              <SiPostgresql />
+            </div>
+            <div aria-label="Databases" title="Databases">
+              <FaDatabase />
             </div>
           </div>
         </div>

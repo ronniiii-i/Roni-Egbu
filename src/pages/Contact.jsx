@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
 function Contact() {
-  const form = useRef();
+  const form = useRef(null);
   const [isSuccess, setIsSuccess] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -22,7 +22,7 @@ function Contact() {
           console.log(result.text);
           setIsSuccess(true); // Set a state variable to indicate success
           setErrorMessage(""); // Clear any previous error messages
-          form.current.reset(); // Reset the form to clear the inputs
+          form.current?.reset();
         },
         (error) => {
           console.log(error.text);
@@ -66,16 +66,32 @@ function Contact() {
   }, [isSuccess, showErrorAlert]); // Only re-run the effect if the `isSuccess` state variable changes
 
   return (
-    <main id="contact">
+    <main id="main-content" className="contact-page">
       <h1>Contact</h1>
-      <form ref={form} onSubmit={sendEmail}>
+      <p className="sr-only" aria-live="polite">
+        {isSuccess === true ? "Your message was sent successfully." : ""}
+        {isSuccess === false ? errorMessage : ""}
+      </p>
+      <form ref={form} onSubmit={sendEmail} aria-label="Contact Roni Egbu">
         <div className="g-af">
-          <input name="name" type="text" placeholder="Your Name" required />
-          <input name="email" type="email" placeholder="Your Email" required />
+          <label>
+            Your name
+            <input name="name" type="text" placeholder="Your Name" required />
+          </label>
+          <label>
+            Your email
+            <input name="email" type="email" placeholder="Your Email" required />
+          </label>
         </div>
-        <input type="text" name="subject" placeholder="Subject" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button className="button button-primary">Send</button>
+        <label>
+          Subject
+          <input type="text" name="subject" placeholder="Subject" required />
+        </label>
+        <label>
+          Your message
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </label>
+        <button type="submit" className="button button-primary">Send message</button>
       </form>
     </main>
   );

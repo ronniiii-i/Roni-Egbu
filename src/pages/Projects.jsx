@@ -7,13 +7,8 @@ import Card from "../components/ProjectCard";
 
 function Projects() {
   const [selectedTag, setSelectedTag] = useState(null);
-  const [select, setSelect] = useState(false);
   const [loading, setLoading] = useState(false);
   const [filteredProjects, setFilteredProjects] = useState([]);
-
-  const toggleDropdown = () => {
-    setSelect(!select);
-  };
 
   const getAllTechnologies = (data) => {
     const counts = data.reduce((map, project) => {
@@ -31,7 +26,7 @@ function Projects() {
 
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false);
       const filtered = selectedTag
         ? projectsData.filter((project) =>
@@ -44,7 +39,8 @@ function Projects() {
       );
 
       setFilteredProjects(sorted);
-    }, 1000);
+    }, 300);
+    return () => clearTimeout(timer);
   }, [selectedTag]);
 
   function handleSelectTag(tag) {
@@ -52,7 +48,7 @@ function Projects() {
   }
 
   return (
-    <main id="project">
+    <main id="main-content" className="project-page">
       <h1>My Projects</h1>
       <section id="projects">
         <div className="sort flex align-center justify-between">
@@ -60,20 +56,20 @@ function Projects() {
             Filter
             <MdTune />
           </h3>
-          <div className="custom-select" onClick={() => toggleDropdown()}>
-            <div className="selected flex align-center justify-between">
-              <p>{selectedTag == null ? "None" : selectedTag}</p>
-              <FaChevronDown />
-            </div>
-            <ul className={`tags ${select ? "open" : ""}`}>
-              <li onClick={() => handleSelectTag(null)}>None</li>
-              {technologies.map((tech, index) => (
-                <li key={index} onClick={() => handleSelectTag(tech)}>
-                  {tech}
-                </li>
+          <label className="custom-select">
+            <span className="sr-only">Filter projects by technology</span>
+            <select
+              value={selectedTag || ""}
+              onChange={(event) => handleSelectTag(event.target.value || null)}
+              aria-label="Filter projects by technology"
+            >
+              <option value="">All technologies</option>
+              {technologies.map((tech) => (
+                <option key={tech} value={tech}>{tech}</option>
               ))}
-            </ul>
-          </div>
+            </select>
+            <FaChevronDown aria-hidden="true" />
+          </label>
         </div>
         {loading ? (
           <BeatLoader
@@ -81,7 +77,7 @@ function Projects() {
             width="80"
             radius="9"
             color="#ffffff"
-            ariaLabel="beat-loader"
+            ariaLabel="Loading projects"
             wrapperStyle={{}}
             className="loader"
             visible={true}
@@ -89,7 +85,7 @@ function Projects() {
             speedMultiplier={0.3}
           />
         ) : (
-          <div className="portfolio-container flex wrap">
+          <div className="portfolio-container flex wrap" aria-live="polite">
             {filteredProjects.map((project) => (
               <Card
                 project={project}

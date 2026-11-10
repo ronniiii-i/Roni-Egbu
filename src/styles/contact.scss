@@ -1,6 +1,6 @@
 @use "./prestyles" as *;
 
-#contact {
+.contact-page {
   padding: 2vw;
   h1 {
     text-align: center;
@@ -25,6 +25,11 @@
     }
     .g-af {
       gap: 1.5rem;
+    }
+    label {
+      display: block;
+      font-family: $sans;
+      font-weight: 600;
     }
     input[name="subject"]{
       margin-block: 1.5rem;

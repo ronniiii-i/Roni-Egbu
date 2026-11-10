@@ -24,8 +24,13 @@ function App() {
   return (
     <>
       <Router>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
         <Nav />
-        <p className="date">{formattedDate}</p>
+        <p className="date">
+          <time dateTime={currentDate.toISOString()}>{formattedDate}</time>
+        </p>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/projects" element={<Projects />} />
@@ -33,11 +38,12 @@ function App() {
         </Routes>
         <footer className="flex justify-between align">
           <p>Roni Egbu © 2023. All rights reserved.</p>
-          <div className="icons flex align-center">
+          <nav className="icons flex align-center" aria-label="Social links">
             <a
               href="https://www.twitter.com/ronniiii_i"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Roni Egbu on X"
             >
               <FaTwitter />
             </a>
@@ -45,6 +51,7 @@ function App() {
               href="https://github.com/ronniiii-i/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Roni Egbu on GitHub"
             >
               <FaGithubSquare />
             </a>
@@ -52,10 +59,11 @@ function App() {
               href="https://www.linkedin.com/in/princess-roni-egbu/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Roni Egbu on LinkedIn"
             >
               <FaLinkedinIn />
             </a>
-          </div>
+          </nav>
         </footer>
       </Router>
       <Analytics />

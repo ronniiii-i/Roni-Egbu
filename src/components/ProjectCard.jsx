@@ -4,12 +4,12 @@ const ProjectCard = ({ project, handleSelectTag }) => {
   const hasImage = !!project.image;
 
   return (
-    <div className="project-card" key={project.id}>
+    <article className="project-card">
       <div className="img flex justify-center align-center relative">
         {hasImage ? (
           <img
             src={project.image}
-            alt={project.title}
+            alt={`${project.title} project preview`}
             loading="lazy"
             className="object-cover"
           />
@@ -36,6 +36,7 @@ const ProjectCard = ({ project, handleSelectTag }) => {
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View live demo of ${project.title}`}
               >
                 View Demo
               </a>
@@ -45,11 +46,12 @@ const ProjectCard = ({ project, handleSelectTag }) => {
                 href={project.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View source code for ${project.title}`}
               >
                 View Source
               </a>
             )}
-          </div>
+            </div>
         ) : null}
       </div>
 
@@ -60,13 +62,17 @@ const ProjectCard = ({ project, handleSelectTag }) => {
         {project.technologies?.length > 0 && (
           <div className="technologies flex align-center flex-wrap gap-2">
             {project.technologies.map((technology) => (
-              <a
-                href="javascript:void(0);"
-                key={technology}
-                onClick={() => handleSelectTag(technology)}
-              >
-                {technology}
-              </a>
+              handleSelectTag ? (
+                <button
+                  type="button"
+                  key={technology}
+                  onClick={() => handleSelectTag(technology)}
+                >
+                  {technology}
+                </button>
+              ) : (
+                <span key={technology}>{technology}</span>
+              )
             ))}
           </div>
         )}
@@ -78,6 +84,7 @@ const ProjectCard = ({ project, handleSelectTag }) => {
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View live demo of ${project.title}`}
               >
                 View Demo
               </a>
@@ -87,6 +94,7 @@ const ProjectCard = ({ project, handleSelectTag }) => {
                 href={project.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View source code for ${project.title}`}
               >
                 View Source
               </a>
@@ -94,7 +102,7 @@ const ProjectCard = ({ project, handleSelectTag }) => {
           </div>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 
